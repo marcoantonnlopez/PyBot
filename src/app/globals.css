@@ -1,50 +1,164 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+     :root {
+        --foreground-rgb: 255, 255, 255;
+        --background-start-rgb: 0, 0, 0;
+        --background-end-rgb: 0, 0, 0;
+    }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background-image: url("assets/header.png");
-  font-family: 'Poppins', sans-serif;
+    color: rgb(var(--foreground-rgb));
+    background-image: url("assets/header.png");
+    font-family: 'Poppins', sans-serif;
 }
 
-.hola{
-  background-color: #edf2f7;
+.logo-container {
+    width: 100%;
+    text-align: center;
 }
 
-.scrollbar-w-2::-webkit-scrollbar {
-  width: 0.25rem;
-  height: 0.25rem;
+.codingnexus {
+    color: #fff;
+    margin-top: 15px;
+    font-size: 12px;
 }
 
-.scrollbar-track-blue-lighter::-webkit-scrollbar-track {
-  --bg-opacity: 1;
-  background-color: #f7fafc;
-  background-color: rgba(247, 250, 252, var(--bg-opacity));
+.codingnexus a {
+    color: #fff;
+    text-decoration: none;
 }
 
-.scrollbar-thumb-blue::-webkit-scrollbar-thumb {
-  --bg-opacity: 1;
-  background-color: #edf2f7;
-  background-color: rgba(237, 242, 247, var(--bg-opacity));
+#loading {
+    font-size: 50px;
 }
 
-.scrollbar-thumb-rounded::-webkit-scrollbar-thumb {
-  border-radius: 0.25rem;
+
+/* Style the chat box */
+
+.chat-box {
+    margin: 0 auto;
+    width: 800px;
+    max-width: 100%;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-height: calc(100vh - 250px);
+    height: 100vh;
+}
+
+.codingnexus {
+    width: 100%;
+    text-align: center;
+}
+
+
+/* Style the chat box header */
+
+.chat-box-header {
+    /* background-color: #009B9B; */
+    background: linear-gradient(90deg, #009B9B, #005f6a);
+    color: #ffffff;
+    padding: 16px;
+    font-size: 20px;
+    font-weight: bold;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+
+/* Style the chat box body */
+
+.chat-box-body {
+    padding: 16px;
+    overflow-y: auto;
+    height: calc(100% - 145px);
+}
+
+
+/* Style the chat messages */
+
+.chat-box-body .message,
+.chat-box-body .response {
+    margin-bottom: 16px;
+    padding: 8px 16px;
+    border-radius: 8px;
+}
+
+
+/* Style the user's messages */
+
+.chat-box-body .message {
+    background-color: #e6e6e6;
+    color: #333333;
+}
+
+
+/* Style the chatbot's responses */
+
+.chat-box-body .response {
+    background-color: #009B9B;
+    color: #ffffff;
+    text-align: right;
+}
+
+
+/* Style the chat box footer */
+
+.chat-box-footer {
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border-top: 1px solid #e6e6e6;
+    padding: 8px 16px;
+}
+
+
+/* Style the input field */
+
+.chat-box-footer input[type="text"] {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #e6e6e6;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+}
+
+
+/* Style the button */
+
+.chat-box-footer button {
+    margin-left: 8px;
+    padding: 8px 16px;
+    /* background-color: #8c00ff; */
+    background-color: #009B9B;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
+/* Add some hover effects to the button */
+
+.chat-box-footer button:hover {
+    background-color: #0073e6;
+}
+
+.chat-box-footer button:active {
+    background-color: #005bbf;
 }
